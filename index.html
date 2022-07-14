@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Digital card</title>
+    <link rel="stylesheet" href="css/indexstyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+
+    <form class="insetingdiv">
+        <table rows="2" cols="8">
+            <tr>
+                <td>Person Name:</td>
+                <td><input type="text" required pattern="{A-z,a-z}" name="personname" id="Personnameid"
+                        class="all_inputfeild" /></td>
+            </tr>
+
+            <tr>
+                <td>Phone :</td>
+                <td><input type="text" class="all_inputfeild" required maxlength="10" pattern="[0-9]{10}" minlength="8"
+                        name="phone" id="Phoneid" /></td>
+            </tr>
+
+            <tr>
+                <td>Place:</td>
+                <td> <input type="text" class="all_inputfeild" required name="place" id="Placeid" /></td>
+            </tr>
+
+            <tr>
+                <td>
+                    DOB :
+                </td>
+                <td>
+                    <input type="Date" class="all_inputfeild" name="dateofbirth" id="Dobid" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Account No :</td>
+                <td><input type="text" class="all_inputfeild" required name="acno" id="Accnid" /></td>
+            </tr>
+
+            <tr>
+                <td>Add photo: </td>
+                <td><input type="file" class="choosefileanimation" required name="profilimageid" id="image_entered"
+                        accept="image/jpg, image/png" /></td>
+            </tr>
+
+            <tr>
+                <td>Add signature: </td>
+                <td>
+                    <input type="file" class="choosefileanimation" required name="signatureimageid"
+                        id="signature_uploading" accept="image/png, image/jpg" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" class="enterbtn" id="enterbtnid" onclick="displayvalue()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+    <div class="typewriting">
+        <h1 id="output_heading" style="display:block ;"><em>Fill and hit submit to see your card</em></h1>
+    </div>
+
+
+
+
+    <!-- Output part -->
+
+
+
+    <div class="output_carddiv" id="cardid" style="display:none ;"  onclick="changecolor()">
+
+        <label>NAME:</label>
+        <div class="image_displaying" id="displayimgs"></div>
+        <span id="getname"></span>
+
+
+        <label>PHONE:</label>
+        <span id="getphone"></span>
+
+        <label>PLACE:</label>
+        <label class="signature_label">Signature:</label>
+        <span id="getplace"></span>
+
+        <div class="signature_displaying" id="displaysignature"></div>
+        <label>DOB:</label>
+
+        <span id="getdob"></span>
+        <label>ACCOUNT No:</label>
+        <span id="getaccno"></span>
+
+
+
+        <!-- <img src="" id="displayimgs" height="10" alt="Image preview..."> -->
+
+
+
+        <!-- <span id="getsig"></span> -->
+
+    </div>
+
+
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>
